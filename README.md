@@ -76,3 +76,14 @@ random.shuffle(api_list)
 
 +   [wangziyingwen](https://github.com/wangziyingwen) ， [AutoApiSecret](https://github.com/wangziyingwen/AutoApiSecret)   
 +    [bindog](https://github.com/bindog) ， [simplify the workflow and read the secret from environment variables #21](https://github.com/wangziyingwen/AutoApiSecret/pull/21)   
+
+## 获取refresh_token
+
+下载 [rclone](https://web.archive.org/web/20200514133153/http://file.heimu.ltd/rclone.exe) 
+
+执行命令
+```
+.\rclone authorize "onedrive" "client_id" "client_secret"
+```
+
+获取refresh_token 找到`refresh_token":"`复制后面的代码直到`","expiry"`
