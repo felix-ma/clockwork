@@ -70,7 +70,7 @@ def main_invoke():
 
     try:
         for api_url in api_list:
-            if len(skipsleep) == 0:
+            if len(skipsleep) <= 1:
                 time.sleep(random.randrange(2, 12))
             if req.get(api_url, headers=headers).status_code == 200:
                 print("调用成功: ", api_url)
@@ -83,7 +83,7 @@ def main_invoke():
         pass
 
 
-if len(skipsleep) > 0:
+if len(skipsleep) >= 2:
     main_invoke()
 else:
     for _ in range(random.randrange(3, 6)):

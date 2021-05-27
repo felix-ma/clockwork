@@ -37,6 +37,7 @@ jobs:
         GIST_TEXT: ${{ secrets.GIST_TEXT }}
         CONFIG_ID: ${{ secrets.CONFIG_ID }}
         CONFIG_KEY: ${{ secrets.CONFIG_KEY }}
+        SKIP_SLEEP: ${{ secrets.SKIP_SLEEP }}
       run: python main.py
     - name: Push Gist # 上传新的 refresh_token 到 gist 
       env:
